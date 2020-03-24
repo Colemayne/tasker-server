@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_tasks_table
+      author: Coleman
+      changes:
+        - createTable:
+            tableName: TASK
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: tkey
+                  type: varchar(10)
+              - column:
+                  name: reporter
+                  type: varchar(64)
+              - column:
+                  name: time
+                  type: datetime
+              - column:
+                  name: description
+                  type: mediumtext
+              - column:
+                  name: status
+                  type: varchar(64)
+              - column:
+                  name: owner
+                  type: varchar(64)
